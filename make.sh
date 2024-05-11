@@ -45,7 +45,7 @@ build_android() {
              --install-dir ${STANDALONE}
   }
 
-  ANDROID=1 CROSS="${STANDALONE}/${CROSS}/bin" CFLAGS="--sysroot=${STANDALONE}/sysroot" ${MAKE} $*
+  ANDROID=1 CROSS="${STANDALONE}/bin" CFLAGS="--sysroot=${STANDALONE}/sysroot" ${MAKE} $*
 }
 
 # build iOS lib for all iDevices, or only specific device

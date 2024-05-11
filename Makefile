@@ -23,9 +23,9 @@ endif
 ifeq ($(CROSS),)
 RANLIB ?= ranlib
 else ifeq ($(ANDROID), 1)
-CC = $(CROSS)/../../bin/clang
-AR = $(CROSS)/ar
-RANLIB = $(CROSS)/ranlib
+CC = $(CROSS)/clang
+AR = $(CROSS)/llvm-ar
+RANLIB = $(CROSS)/llvm-ranlib
 STRIP = $(CROSS)/strip
 else
 CC = $(CROSS)gcc
